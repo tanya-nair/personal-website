@@ -1,0 +1,11 @@
+#left_bubble{
+    position: absolute;
+    left:0;
+    transition: all 800ms ease-in;
+}
+
+#left_side{
+    width: 800px;
+    position: relative;
+    height: 800px;
+}

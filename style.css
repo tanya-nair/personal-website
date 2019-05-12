@@ -1,3 +1,18 @@
+@media screen and (max-width: 420px){
+    div#header-image{
+	    display: inline-block;
+        position: relative;
+    /*width: 200px;*/
+}
+.primary_heading{
+	font-size: 40px;
+	    text-shadow: 2px 2px 20px white;
+}
+}
+
+
+
+
 body {
 	font-family: 'Playfair Display', serif;
 
@@ -57,7 +72,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .project_card {
     width: 300px;
-    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
     background: black;
     color: white;
     padding: 8px;
@@ -67,6 +83,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     box-shadow: 2px 2px 5px #bdbdbd;
 
     display: inline-block;
+    transition: all 200ms ease-in;
+}
+
+.project_card:hover { 
+    background: #7067cf;
+    transform: translateY(-100px);
 }
 .project_container {
     text-align: center;
