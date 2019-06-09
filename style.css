@@ -2,7 +2,8 @@
         div#header-image{
             display: inline-block !important;
             position: relative !important;
-            left: 0 !important;
+            left: 0 !important;'
+        /*width: 200px;*/'
     }
     .primary_heading{
         font-size: 40px !important;
@@ -82,17 +83,20 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     border: 3px solid purple;
     border-radius: 8px;
     box-shadow: 2px 2px 5px #bdbdbd;
-
-    display: inline-block;
     transition: all 200ms ease-in;
 }
 
 .project_card:hover { 
     background: #7067cf;
-    transform: translateY(-100px);
+    transform: translateY(-70px);
 }
 .project_container {
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+
 }
 
 
