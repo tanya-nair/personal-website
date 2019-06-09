@@ -1,9 +1,9 @@
+
+
+
 @media screen and (min-width: 10px) and (max-width: 420px){
-        div#header-image{
-            display: inline-block !important;
-            position: relative !important;
-            left: 0 !important;'
-        /*width: 200px;*/'
+        #header{
+           flex-direction: column !important; 
     }
     .primary_heading{
         font-size: 40px !important;
@@ -24,7 +24,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 #header{
 	padding: 48px;
-	position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 	height: 600px;
 }
 .primary_heading{
@@ -33,18 +36,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 div#header-text {
-    width: 100%;
-    display: inline-block;
+    
 }
 
 div#header-image{
-	    display: inline-block;
-    position: absolute;
-    left: 50%;
-    top: 0px;
-    /*width: 200px;*/
+       align-self: flex-start;
+       max-width: 100%;
 }
-
 
 div#header-image img{
     width: 100%
