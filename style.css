@@ -82,11 +82,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     border-radius: 8px;
     box-shadow: 2px 2px 5px #bdbdbd;
     transition: all 200ms ease-in;
+    margin-bottom: 30px;
+
 }
 
 .project_card:hover { 
     background: #7067cf;
-    transform: translateY(-70px);
+    transform: translateY(-35px);
 }
 .project_container {
     text-align: center;
