@@ -2,7 +2,7 @@
 
 
 @media screen and (min-width: 10px) and (max-width: 420px){
-        #header{
+        #header , .project_container{
            flex-direction: column !important; 
     }
     .primary_heading{
