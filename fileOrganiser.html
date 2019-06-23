@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Organizer</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+  
+</head>
+
+<body>
+    
+    <IMG src="watermark.png" class="watermark">
+        <h1 class="primary_heading" style=" color:#7067cf;  text-align:center"> File Organizer</h1>
+    <pre>
+        <code class="python">
+            # Scan all the files in particular folder
+            # identify the type of the file
+            # move the file to another location
+            # Repeat this for all the files
+            
+            import os, glob, shutil
+            
+            path = '/Users/office/Downloads/'
+            
+            files = glob.glob(path + '*')
+            
+            IMAGES_EXT = ['jpg', 'jpeg', 'img', 'gif', 'png']
+            DOCS_EXT = ['docx', 'pdf', 'ppt', 'pptx', 'doc']
+            MUSIC_EXT = ['mp3', 'wav']
+            MOVIE_EXT =['mp4', 'mov', 'mkv']
+            MISC_EXT = ['dmg', 'pkg', 'zip', 'rar', 'jar']
+            
+            
+            images = path + 'images'
+            docs = path + 'docs'
+            music = path + 'music'
+            movies = path + 'movies'
+            misc = path + 'misc'
+            
+            for filename in files:
+                extension = filename.split('.')[-1]
+                if extension.lower() in IMAGES_EXT:
+                    shutil.copy2(filename, images)
+                if extension.lower() in DOCS_EXT:
+                    shutil.copy2(filename, docs)
+                </code>
+
+    </pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

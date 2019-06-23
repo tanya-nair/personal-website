@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess The Number</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+  
+</head>
+
+<body>
+    
+    <IMG src="watermark.png" class="watermark">
+        <h1 class="primary_heading" style=" color:#7067cf;  text-align:center"> Guess The Number</h1>
+    <pre>
+        <code class="python">
+            from random import randint
+from os import system
+
+x = randint(1,50)
+guesses=5
+hasAnswered = False
+print("guess the number between 1 and 50, we will indicate whether your guess was more or less. you have 5 chances...use them wisely.")
+while guesses > 0:
+    user_guess = int(input("Guess the number: "))
+    if user_guess > x:
+        print("Your guess was more")
+        system("say Your guess was more")
+    elif user_guess < x:
+        print("Your guess was less")
+        system("say Your guess was less")
+    else:
+        print("Your guess was correct")
+        system("say Your guess was correct")
+        hasAnswered = True
+        break
+    guesses = guesses - 1
+
+if not hasAnswered:
+    output = "You lost, right answer was" + str(x)
+    system("say "+ output)
+
+
+                </code>
+
+    </pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
